@@ -710,10 +710,6 @@ const GroupPage = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white p-8 overflow-hidden">
-      <h1 className="text-4xl font-bold text-center mb-8 text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-600">
-        🎯 Group Assignment
-      </h1>
-
       <div className="grid w-full grid-cols-3 gap-8 h-[calc(100vh-150px)]">
         <div className="flex flex-col justify-center space-y-4">
           {GROUPS.slice(0, Math.ceil(GROUPS.length / 2)).map((group) => (
@@ -850,9 +846,8 @@ const HomePage = () => {
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-indigo-900 to-gray-900 text-white flex flex-col items-center justify-center p-8">
       <div className="text-center mb-12">
         <h1 className="text-6xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-pink-600 to-purple-600 animate-pulse">
-          🎰
+          🎰 Crest Volleyball Tournament
         </h1>
-        <p className="text-2xl text-gray-300">Team & Group Assignment System</p>
       </div>
 
       <div className="bg-gray-800 bg-opacity-50 backdrop-blur-lg rounded-2xl p-8 max-w-2xl w-full border-2 border-purple-500 shadow-2xl">
