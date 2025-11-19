@@ -688,24 +688,22 @@ const GroupPage = () => {
     setSpinning(true);
     setSelectedTeam(team);
 
-    setTimeout(() => {
-      setSpinning(false);
+    setSpinning(false);
 
-      const currentGroup = GROUPS[currentGroupIndex];
-      const newGroupAssignments = {
-        ...groupAssignments,
-        [currentGroup]: [...(groupAssignments[currentGroup] || []), team],
-      };
-      setGroupAssignments(newGroupAssignments);
+    const currentGroup = GROUPS[currentGroupIndex];
+    const newGroupAssignments = {
+      ...groupAssignments,
+      [currentGroup]: [...(groupAssignments[currentGroup] || []), team],
+    };
+    setGroupAssignments(newGroupAssignments);
 
-      const newAvailableTeams = availableTeams.filter((t) => t !== team);
-      setAvailableTeams(newAvailableTeams);
+    const newAvailableTeams = availableTeams.filter((t) => t !== team);
+    setAvailableTeams(newAvailableTeams);
 
-      const nextGroupIndex = (currentGroupIndex + 1) % GROUPS.length;
-      setCurrentGroupIndex(nextGroupIndex);
+    const nextGroupIndex = (currentGroupIndex + 1) % GROUPS.length;
+    setCurrentGroupIndex(nextGroupIndex);
 
-      setSelectedTeam(null);
-    }, 3000);
+    setSelectedTeam(null);
   };
 
   const currentGroup = GROUPS[currentGroupIndex];
@@ -852,7 +850,7 @@ const HomePage = () => {
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-indigo-900 to-gray-900 text-white flex flex-col items-center justify-center p-8">
       <div className="text-center mb-12">
         <h1 className="text-6xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-pink-600 to-purple-600 animate-pulse">
-          🎰 Spin Wheel Game
+          🎰
         </h1>
         <p className="text-2xl text-gray-300">Team & Group Assignment System</p>
       </div>
@@ -953,7 +951,7 @@ export default function App() {
             to="/"
             className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-pink-600"
           >
-            🎰 Spin Wheel
+            🎰
           </Link>
           <div className="flex gap-4">
             <Link
